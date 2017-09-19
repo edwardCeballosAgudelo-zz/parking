@@ -43,7 +43,8 @@
       </tr>
     </tbody>
     <div class="button-row">
-        <button [disabled]="!addForm.valid" md-raised-button color="primary">SAVE</button>
+        <button [disabled]="!addForm.valid" md-raised-button color="primary" (click)="onSaveClick()" >SAVE</button>
+        <button [disabled]="!addForm.valid" md-raised-button color="primary" (click)="onNewClick()" >NEW</button>
     </div>
   </table>
 </form>

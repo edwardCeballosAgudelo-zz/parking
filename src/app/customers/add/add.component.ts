@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Customer } from '../customer';
+import { CustomerService } from '../customer-service.service';
 
 
 @Component({
@@ -11,11 +12,19 @@ export class AddComponent implements OnInit {
 
   public customer: Customer;
 
-  constructor() {
+  constructor(private customerService: CustomerService) {
 
   }
 
   ngOnInit() {
+    this.customer = new Customer();
+  }
+
+  onSaveClick() {
+    this.customerService.customersList.push(this.customer);
+  }
+
+  onNewClick() {
     this.customer = new Customer();
   }
 

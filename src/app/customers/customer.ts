@@ -1,7 +1,7 @@
 export class Customer {
 
   name:  string;
-  stratum: string;
+  stratum: number;
   address: string;
   gender: string;
 

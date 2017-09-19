@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddComponent } from './add/add.component';
 import { ListComponent } from './list/list.component';
 import { IndexComponent } from './index/index.component';
+import { CustomerService } from './customer-service.service';
+
 
 import {
   MdAutocompleteModule,
@@ -78,6 +80,7 @@ import {
     MdTooltipModule,
     BrowserAnimationsModule
   ],
-  declarations: [AddComponent, ListComponent, IndexComponent]
+  declarations: [AddComponent, ListComponent, IndexComponent],
+  providers: [CustomerService]
 })
 export class CustomersModule { }
